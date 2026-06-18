@@ -43,64 +43,64 @@ export function Hero() {
   const animatedStatus = STATUS_CYCLE[statusIdx];
 
   return (
-    <section className="relative min-h-screen bg-[#EEF2F7] overflow-hidden">
-      <div className="max-w-[1240px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-12 lg:gap-8">
+    <section className="relative lg:h-[calc(100vh-68px)] lg:min-h-[640px] bg-[#EEF2F7] overflow-hidden">
+      <div className="max-w-[1240px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-8 lg:gap-8 h-full">
         {/* LEFT */}
-        <div className="pt-[148px] pb-16">
+        <div className="pt-10 lg:pt-16 pb-10">
           <Reveal>
             <div className="flex items-center gap-3">
               <span className="block w-7 h-[2px] bg-[#0BAF8A]" />
               <span className="text-[11px] font-bold tracking-[0.1em] text-[#94A3B8] uppercase">India's International Recruitment Agency</span>
             </div>
-            <h1 className="mt-8 font-extrabold text-[44px] sm:text-[56px] lg:text-[68px] leading-[1.08] tracking-[-0.03em] text-[#0D1B2A]">
-              Where great hospitals<br />meet great<br />
+            <h1 className="mt-5 font-extrabold text-[34px] sm:text-[42px] lg:text-[50px] leading-[1.08] tracking-[-0.03em] text-[#0D1B2A]">
+              Where great hospitals<br />meet great{" "}
               <span className="text-[#0BAF8A]">talent.</span>
             </h1>
-            <p className="mt-5 max-w-[440px] text-[18px] leading-[1.7] text-[#4A5568]">
+            <p className="mt-4 max-w-[440px] text-[15px] lg:text-[16px] leading-[1.6] text-[#4A5568]">
               Ozone Overseas connects verified hospitals and companies across the GCC and beyond with India's best healthcare and technical professionals. MEA licensed. 15 years. 5,000 placements.
             </p>
           </Reveal>
 
-          <Reveal delay={120} className="mt-9 flex flex-col gap-3 max-w-[400px]">
-            <button className="group flex items-center justify-between bg-[#0F1C2E] hover:bg-[#162840] transition-colors rounded-[10px] py-[18px] px-6 text-left w-full">
+          <Reveal delay={120} className="mt-5 flex flex-col gap-2.5 max-w-[400px]">
+            <button className="group flex items-center justify-between bg-[#0F1C2E] hover:bg-[#162840] transition-colors rounded-[10px] py-[12px] px-5 text-left w-full">
               <div className="flex items-center gap-3">
-                <Briefcase className="text-white" size={20} />
+                <Briefcase className="text-white" size={18} />
                 <div>
-                  <div className="text-white text-[15px] font-semibold">I'm an Employer</div>
-                  <div className="text-[#64748B] text-[13px]">Post a requirement, get candidates in 48h</div>
+                  <div className="text-white text-[14px] font-semibold">I'm an Employer</div>
+                  <div className="text-[#64748B] text-[12px]">Post a requirement, get candidates in 48h</div>
                 </div>
               </div>
-              <ArrowRight className="text-white group-hover:translate-x-1 transition-transform" size={20} />
+              <ArrowRight className="text-white group-hover:translate-x-1 transition-transform" size={18} />
             </button>
-            <button className="group flex items-center justify-between bg-[#0BAF8A] hover:bg-[#09A07F] transition-colors rounded-[10px] py-[18px] px-6 text-left w-full">
+            <button className="group flex items-center justify-between bg-[#0BAF8A] hover:bg-[#09A07F] transition-colors rounded-[10px] py-[12px] px-5 text-left w-full">
               <div className="flex items-center gap-3">
-                <User className="text-white" size={20} />
+                <User className="text-white" size={18} />
                 <div>
-                  <div className="text-white text-[15px] font-semibold">I'm a Job Seeker</div>
-                  <div className="text-white/70 text-[13px]">Browse vacancies in 10+ countries</div>
+                  <div className="text-white text-[14px] font-semibold">I'm a Job Seeker</div>
+                  <div className="text-white/70 text-[12px]">Browse vacancies in 10+ countries</div>
                 </div>
               </div>
-              <ArrowRight className="text-white group-hover:translate-x-1 transition-transform" size={20} />
+              <ArrowRight className="text-white group-hover:translate-x-1 transition-transform" size={18} />
             </button>
           </Reveal>
 
-          <div className="mt-7 flex items-center gap-3">
+          <div className="mt-5 flex items-center gap-3">
             <div className="flex">
               {AVATARS.map((a, i) => (
-                <div key={i} className="w-8 h-8 rounded-full flex items-center justify-center text-[11px] font-bold text-[#0D1B2A] ring-2 ring-[#EEF2F7]" style={{ background: a.bg, marginLeft: i === 0 ? 0 : -8 }}>
+                <div key={i} className="w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold text-[#0D1B2A] ring-2 ring-[#EEF2F7]" style={{ background: a.bg, marginLeft: i === 0 ? 0 : -8 }}>
                   {a.initials}
                 </div>
               ))}
             </div>
-            <span className="text-[13px] text-[#94A3B8]">Trusted by 200+ hospitals & companies</span>
+            <span className="text-[12px] text-[#94A3B8]">Trusted by 200+ hospitals & companies</span>
           </div>
         </div>
 
         {/* RIGHT */}
-        <div className="relative flex items-center justify-center lg:pt-20 pb-24">
-          <div className="relative w-full max-w-[480px]">
+        <div className="relative flex items-center justify-center lg:pt-10 pb-12">
+          <div className="relative w-full max-w-[400px]">
             <div className="bg-white rounded-2xl overflow-hidden" style={{ boxShadow: "0 20px 60px rgba(15,28,46,0.1)" }}>
-              <div className="flex items-center justify-between px-6 py-[18px] border-b border-[#EEF2F7]">
+              <div className="flex items-center justify-between px-6 py-3 border-b border-[#EEF2F7]">
                 <span className="text-[13px] font-semibold text-[#0D1B2A]">Active Placements</span>
                 <span className="text-[12px] text-[#94A3B8]">June 2025</span>
               </div>
@@ -108,7 +108,7 @@ export function Hero() {
                 if (row === null) {
                   // animated row
                   return (
-                    <div key="anim" className={`flex items-center justify-between px-6 py-[14px] border-b border-[#F8FAFC] ${flash ? "flash" : ""}`}>
+                    <div key="anim" className={`flex items-center justify-between px-6 py-2.5 border-b border-[#F8FAFC] ${flash ? "flash" : ""}`}>
                       <div className="flex items-center gap-3">
                         <span className="text-[18px]">🇦🇪</span>
                         <div>
@@ -123,7 +123,7 @@ export function Hero() {
                   );
                 }
                 return (
-                  <div key={idx} className="flex items-center justify-between px-6 py-[14px] border-b border-[#F8FAFC]">
+                  <div key={idx} className="flex items-center justify-between px-6 py-2.5 border-b border-[#F8FAFC]">
                     <div className="flex items-center gap-3">
                       <span className="text-[18px]">{row.flag}</span>
                       <div>
@@ -135,7 +135,7 @@ export function Hero() {
                   </div>
                 );
               })}
-              <div className="flex items-center justify-between px-6 py-[14px] bg-[#F8FAFC]">
+              <div className="flex items-center justify-between px-6 py-2.5 bg-[#F8FAFC]">
                 <span className="text-[12px] text-[#94A3B8]">12 Active · 48 Placed this month</span>
                 <a href="#" className="text-[12px] font-semibold text-[#0BAF8A]">View all →</a>
               </div>
