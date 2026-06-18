@@ -97,8 +97,8 @@ export function Hero() {
         </div>
 
         {/* RIGHT */}
-        <div className="relative flex items-center justify-center lg:pt-20 pb-24">
-          <div className="relative w-full max-w-[480px]">
+        <div className="relative flex items-center justify-center lg:pt-10 pb-12">
+          <div className="relative w-full max-w-[400px]">
             <div className="bg-white rounded-2xl overflow-hidden" style={{ boxShadow: "0 20px 60px rgba(15,28,46,0.1)" }}>
               <div className="flex items-center justify-between px-6 py-[18px] border-b border-[#EEF2F7]">
                 <span className="text-[13px] font-semibold text-[#0D1B2A]">Active Placements</span>
