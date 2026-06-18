@@ -74,25 +74,25 @@ export function Hero() {
             </button>
             <button className="group flex items-center justify-between bg-[#0BAF8A] hover:bg-[#09A07F] transition-colors rounded-[10px] py-[12px] px-5 text-left w-full">
               <div className="flex items-center gap-3">
-                <User className="text-white" size={20} />
+                <User className="text-white" size={18} />
                 <div>
-                  <div className="text-white text-[15px] font-semibold">I'm a Job Seeker</div>
-                  <div className="text-white/70 text-[13px]">Browse vacancies in 10+ countries</div>
+                  <div className="text-white text-[14px] font-semibold">I'm a Job Seeker</div>
+                  <div className="text-white/70 text-[12px]">Browse vacancies in 10+ countries</div>
                 </div>
               </div>
-              <ArrowRight className="text-white group-hover:translate-x-1 transition-transform" size={20} />
+              <ArrowRight className="text-white group-hover:translate-x-1 transition-transform" size={18} />
             </button>
           </Reveal>
 
-          <div className="mt-7 flex items-center gap-3">
+          <div className="mt-5 flex items-center gap-3">
             <div className="flex">
               {AVATARS.map((a, i) => (
-                <div key={i} className="w-8 h-8 rounded-full flex items-center justify-center text-[11px] font-bold text-[#0D1B2A] ring-2 ring-[#EEF2F7]" style={{ background: a.bg, marginLeft: i === 0 ? 0 : -8 }}>
+                <div key={i} className="w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold text-[#0D1B2A] ring-2 ring-[#EEF2F7]" style={{ background: a.bg, marginLeft: i === 0 ? 0 : -8 }}>
                   {a.initials}
                 </div>
               ))}
             </div>
-            <span className="text-[13px] text-[#94A3B8]">Trusted by 200+ hospitals & companies</span>
+            <span className="text-[12px] text-[#94A3B8]">Trusted by 200+ hospitals & companies</span>
           </div>
         </div>
 
