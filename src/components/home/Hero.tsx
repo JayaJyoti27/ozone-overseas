@@ -62,17 +62,17 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={120} className="mt-5 flex flex-col gap-2.5 max-w-[400px]">
-            <button className="group flex items-center justify-between bg-[#0F1C2E] hover:bg-[#162840] transition-colors rounded-[10px] py-[18px] px-6 text-left w-full">
+            <button className="group flex items-center justify-between bg-[#0F1C2E] hover:bg-[#162840] transition-colors rounded-[10px] py-[12px] px-5 text-left w-full">
               <div className="flex items-center gap-3">
-                <Briefcase className="text-white" size={20} />
+                <Briefcase className="text-white" size={18} />
                 <div>
-                  <div className="text-white text-[15px] font-semibold">I'm an Employer</div>
-                  <div className="text-[#64748B] text-[13px]">Post a requirement, get candidates in 48h</div>
+                  <div className="text-white text-[14px] font-semibold">I'm an Employer</div>
+                  <div className="text-[#64748B] text-[12px]">Post a requirement, get candidates in 48h</div>
                 </div>
               </div>
-              <ArrowRight className="text-white group-hover:translate-x-1 transition-transform" size={20} />
+              <ArrowRight className="text-white group-hover:translate-x-1 transition-transform" size={18} />
             </button>
-            <button className="group flex items-center justify-between bg-[#0BAF8A] hover:bg-[#09A07F] transition-colors rounded-[10px] py-[18px] px-6 text-left w-full">
+            <button className="group flex items-center justify-between bg-[#0BAF8A] hover:bg-[#09A07F] transition-colors rounded-[10px] py-[12px] px-5 text-left w-full">
               <div className="flex items-center gap-3">
                 <User className="text-white" size={20} />
                 <div>
