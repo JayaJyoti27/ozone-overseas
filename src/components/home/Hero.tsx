@@ -100,7 +100,7 @@ export function Hero() {
         <div className="relative flex items-center justify-center lg:pt-10 pb-12">
           <div className="relative w-full max-w-[400px]">
             <div className="bg-white rounded-2xl overflow-hidden" style={{ boxShadow: "0 20px 60px rgba(15,28,46,0.1)" }}>
-              <div className="flex items-center justify-between px-6 py-[18px] border-b border-[#EEF2F7]">
+              <div className="flex items-center justify-between px-6 py-3 border-b border-[#EEF2F7]">
                 <span className="text-[13px] font-semibold text-[#0D1B2A]">Active Placements</span>
                 <span className="text-[12px] text-[#94A3B8]">June 2025</span>
               </div>
@@ -108,7 +108,7 @@ export function Hero() {
                 if (row === null) {
                   // animated row
                   return (
-                    <div key="anim" className={`flex items-center justify-between px-6 py-[14px] border-b border-[#F8FAFC] ${flash ? "flash" : ""}`}>
+                    <div key="anim" className={`flex items-center justify-between px-6 py-2.5 border-b border-[#F8FAFC] ${flash ? "flash" : ""}`}>
                       <div className="flex items-center gap-3">
                         <span className="text-[18px]">🇦🇪</span>
                         <div>
@@ -123,7 +123,7 @@ export function Hero() {
                   );
                 }
                 return (
-                  <div key={idx} className="flex items-center justify-between px-6 py-[14px] border-b border-[#F8FAFC]">
+                  <div key={idx} className="flex items-center justify-between px-6 py-2.5 border-b border-[#F8FAFC]">
                     <div className="flex items-center gap-3">
                       <span className="text-[18px]">{row.flag}</span>
                       <div>
@@ -135,7 +135,7 @@ export function Hero() {
                   </div>
                 );
               })}
-              <div className="flex items-center justify-between px-6 py-[14px] bg-[#F8FAFC]">
+              <div className="flex items-center justify-between px-6 py-2.5 bg-[#F8FAFC]">
                 <span className="text-[12px] text-[#94A3B8]">12 Active · 48 Placed this month</span>
                 <a href="#" className="text-[12px] font-semibold text-[#0BAF8A]">View all →</a>
               </div>
