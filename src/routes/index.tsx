@@ -1,29 +1,44 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/home/Nav";
+import { Hero } from "@/components/home/Hero";
+import { StatsStrip } from "@/components/home/Stats";
+import { WhoWeServe } from "@/components/home/WhoWeServe";
+import { Process } from "@/components/home/Process";
+import { Services } from "@/components/home/Services";
+import { Countries } from "@/components/home/Countries";
+import { Testimonials } from "@/components/home/Testimonials";
+import { FinalCTA } from "@/components/home/FinalCTA";
+import { Footer, FloatingWhatsApp, ScrollProgress } from "@/components/home/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Ozone Overseas — Where great hospitals meet great talent" },
+      { name: "description", content: "MEA Licensed international recruitment. 5,000+ placements across 10+ countries. Connecting hospitals and companies with India's best healthcare and technical professionals." },
+      { property: "og:title", content: "Ozone Overseas — India's International Recruitment Agency" },
+      { property: "og:description", content: "MEA Licensed. 15 years. 5,000 placements across the GCC and beyond." },
     ],
   }),
-  component: Index,
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <ScrollProgress />
+      <Nav />
+      <main className="pt-[68px]">
+        <Hero />
+        <StatsStrip />
+        <WhoWeServe />
+        <Process />
+        <Services />
+        <Countries />
+        <Testimonials />
+        <FinalCTA />
+      </main>
+      <Footer />
+      <FloatingWhatsApp />
+    </>
   );
 }
