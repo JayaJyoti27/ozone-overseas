@@ -52,11 +52,11 @@ export function Hero() {
               <span className="block w-7 h-[2px] bg-[#0BAF8A]" />
               <span className="text-[11px] font-bold tracking-[0.1em] text-[#94A3B8] uppercase">India's International Recruitment Agency</span>
             </div>
-            <h1 className="mt-8 font-extrabold text-[44px] sm:text-[56px] lg:text-[68px] leading-[1.08] tracking-[-0.03em] text-[#0D1B2A]">
-              Where great hospitals<br />meet great<br />
+            <h1 className="mt-5 font-extrabold text-[34px] sm:text-[42px] lg:text-[50px] leading-[1.08] tracking-[-0.03em] text-[#0D1B2A]">
+              Where great hospitals<br />meet great{" "}
               <span className="text-[#0BAF8A]">talent.</span>
             </h1>
-            <p className="mt-5 max-w-[440px] text-[18px] leading-[1.7] text-[#4A5568]">
+            <p className="mt-4 max-w-[440px] text-[15px] lg:text-[16px] leading-[1.6] text-[#4A5568]">
               Ozone Overseas connects verified hospitals and companies across the GCC and beyond with India's best healthcare and technical professionals. MEA licensed. 15 years. 5,000 placements.
             </p>
           </Reveal>
