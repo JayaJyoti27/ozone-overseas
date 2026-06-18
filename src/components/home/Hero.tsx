@@ -43,10 +43,10 @@ export function Hero() {
   const animatedStatus = STATUS_CYCLE[statusIdx];
 
   return (
-    <section className="relative min-h-screen bg-[#EEF2F7] overflow-hidden">
-      <div className="max-w-[1240px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-12 lg:gap-8">
+    <section className="relative lg:h-[calc(100vh-68px)] lg:min-h-[640px] bg-[#EEF2F7] overflow-hidden">
+      <div className="max-w-[1240px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-8 lg:gap-8 h-full">
         {/* LEFT */}
-        <div className="pt-[148px] pb-16">
+        <div className="pt-10 lg:pt-16 pb-10">
           <Reveal>
             <div className="flex items-center gap-3">
               <span className="block w-7 h-[2px] bg-[#0BAF8A]" />
