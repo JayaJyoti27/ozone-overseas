@@ -61,7 +61,7 @@ export function Hero() {
             </p>
           </Reveal>
 
-          <Reveal delay={120} className="mt-9 flex flex-col gap-3 max-w-[400px]">
+          <Reveal delay={120} className="mt-5 flex flex-col gap-2.5 max-w-[400px]">
             <button className="group flex items-center justify-between bg-[#0F1C2E] hover:bg-[#162840] transition-colors rounded-[10px] py-[18px] px-6 text-left w-full">
               <div className="flex items-center gap-3">
                 <Briefcase className="text-white" size={20} />
