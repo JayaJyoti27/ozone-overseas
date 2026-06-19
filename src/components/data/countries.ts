@@ -1,0 +1,191 @@
+export type Country = {
+  slug: string;
+  name: string;
+  geoName: string;
+  flag: string; // svg url now
+  openRoles: number;
+  metricLabel: string;
+  metricValue: string;
+  coords: [number, number];
+  href?: string;
+};
+
+const flag = (code: string) => `https://flagcdn.com/w160/${code}.png`;
+
+export const COUNTRIES: Country[] = [
+  {
+    slug: "saudi-arabia",
+    name: "Saudi Arabia",
+    geoName: "Saudi Arabia",
+    flag: flag("sa"),
+    openRoles: 142,
+    metricLabel: "Healthcare Roles",
+    metricValue: "118",
+    coords: [45.0792, 23.8859],
+    href: "/countries/saudi-arabia",
+  },
+  {
+    slug: "uae",
+    name: "UAE",
+    geoName: "United Arab Emirates",
+    flag: flag("ae"),
+    openRoles: 128,
+    metricLabel: "Healthcare Roles",
+    metricValue: "94",
+    coords: [54.3773, 24.4539],
+  },
+  {
+    slug: "qatar",
+    name: "Qatar",
+    geoName: "Qatar",
+    flag: flag("qa"),
+    openRoles: 76,
+    metricLabel: "Healthcare Roles",
+    metricValue: "61",
+    coords: [51.531, 25.2854],
+  },
+  {
+    slug: "oman",
+    name: "Oman",
+    geoName: "Oman",
+    flag: flag("om"),
+    openRoles: 48,
+    metricLabel: "Healthcare Roles",
+    metricValue: "39",
+    coords: [55.9754, 21.4735],
+  },
+  {
+    slug: "kuwait",
+    name: "Kuwait",
+    geoName: "Kuwait",
+    flag: flag("kw"),
+    openRoles: 41,
+    metricLabel: "Healthcare Roles",
+    metricValue: "32",
+    coords: [47.4818, 29.3117],
+  },
+  {
+    slug: "malaysia",
+    name: "Malaysia",
+    geoName: "Malaysia",
+    flag: flag("my"),
+    openRoles: 34,
+    metricLabel: "Technical Roles",
+    metricValue: "21",
+    coords: [101.9758, 4.2105],
+  },
+  {
+    slug: "singapore",
+    name: "Singapore",
+    geoName: "Singapore",
+    flag: flag("sg"),
+    openRoles: 29,
+    metricLabel: "Technical Roles",
+    metricValue: "19",
+    coords: [103.8198, 1.3521],
+  },
+  {
+    slug: "canada",
+    name: "Canada",
+    geoName: "Canada",
+    flag: flag("ca"),
+    openRoles: 87,
+    metricLabel: "Skilled Worker Visas",
+    metricValue: "62",
+    coords: [-106.3468, 56.1304],
+  },
+  {
+    slug: "uk",
+    name: "United Kingdom",
+    geoName: "United Kingdom",
+    flag: flag("gb"),
+    openRoles: 96,
+    metricLabel: "NHS Roles",
+    metricValue: "71",
+    coords: [-2.436, 54.2361],
+  },
+  {
+    slug: "australia",
+    name: "Australia",
+    geoName: "Australia",
+    flag: flag("au"),
+    openRoles: 58,
+    metricLabel: "Sponsored Visas",
+    metricValue: "44",
+    coords: [133.7751, -25.2744],
+  },
+  {
+    slug: "germany",
+    name: "Germany",
+    geoName: "Germany",
+    flag: flag("de"),
+    openRoles: 52,
+    metricLabel: "Nursing Roles",
+    metricValue: "38",
+    coords: [10.4515, 51.1657],
+  },
+  {
+    slug: "usa",
+    name: "USA",
+    geoName: "United States of America",
+    flag: flag("us"),
+    openRoles: 45,
+    metricLabel: "Specialist Roles",
+    metricValue: "31",
+    coords: [-95.7129, 37.0902],
+  },
+  {
+    slug: "ireland",
+    name: "Ireland",
+    geoName: "Ireland",
+    flag: flag("ie"),
+    openRoles: 31,
+    metricLabel: "HSE Roles",
+    metricValue: "24",
+    coords: [-8.2439, 53.4129],
+  },
+  {
+    slug: "denmark",
+    name: "Denmark",
+    geoName: "Denmark",
+    flag: flag("dk"),
+    openRoles: 18,
+    metricLabel: "Technical Roles",
+    metricValue: "14",
+    coords: [9.5018, 56.2639],
+  },
+  {
+    slug: "malta",
+    name: "Malta",
+    geoName: "Malta",
+    flag: flag("mt"),
+    openRoles: 14,
+    metricLabel: "Healthcare Roles",
+    metricValue: "11",
+    coords: [14.3754, 35.9375],
+  },
+  {
+    slug: "russia",
+    name: "Russia",
+    geoName: "Russia",
+    flag: flag("ru"),
+    openRoles: 12,
+    metricLabel: "Energy Sector",
+    metricValue: "9",
+    coords: [105.3188, 61.524],
+  },
+  {
+    slug: "new-zealand",
+    name: "New Zealand",
+    geoName: "New Zealand",
+    flag: flag("nz"),
+    openRoles: 22,
+    metricLabel: "Sponsored Roles",
+    metricValue: "17",
+    coords: [174.886, -40.9006],
+  },
+];
+
+export const HUB_COORDS: [number, number] = [46.6753, 24.7136];
+
+export const COUNTRY_BY_GEO = Object.fromEntries(COUNTRIES.map((c) => [c.geoName, c]));

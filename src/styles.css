@@ -1,0 +1,192 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --color-bg: #eef2f7;
+  --color-surface: #ffffff;
+  --color-alt: #f0f4f9;
+  --color-navy: #0f1c2e;
+  --color-navy-text: #0d1b2a;
+  --color-teal: #0baf8a;
+  --color-teal-hover: #09a07f;
+  --color-body: #4a5568;
+  --color-muted: #94a3b8;
+  --color-border: #dde3ed;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate-angle {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes flash-highlight {
+  0% {
+    background-color: #fef9c3;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes row-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes countryUp {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes countryDown {
+  from {
+    transform: translateY(-50%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.ozone-flag-mask {
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+@supports (animation-timeline: scroll()) {
+  .scroll-progress-bar {
+    animation: scroll-progress auto linear;
+    animation-timeline: scroll(root);
+  }
+}
+
+html {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #eef2f7;
+  color: #0d1b2a;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+.marquee-track.reverse {
+  animation: marquee-reverse 25s linear infinite;
+}
+
+.shimmer-layer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 6s linear infinite;
+  pointer-events: none;
+}
+
+.animated-border {
+  background: conic-gradient(from var(--angle), #0baf8a, transparent 25%, transparent 75%, #0baf8a);
+  animation: rotate-angle 4s linear infinite;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.55s ease-out,
+    transform 0.55s ease-out;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.accent-bar {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+}
+.accent-bar.in-view {
+  transform: scaleY(1);
+}
+
+.flash {
+  animation: flash-highlight 0.4s ease-out;
+}
+
+.fade-row {
+  animation: row-slide-in 0.35s ease-out;
+}
