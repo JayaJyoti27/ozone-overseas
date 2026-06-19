@@ -17,30 +17,102 @@ export function Nav() {
           </Link>
 
           <div className="hidden lg:flex items-center gap-10">
-            <Link
-              to="/countries"
-              className="flex items-center gap-1 text-[15px] font-medium text-slate-700 hover:text-emerald-600"
-            >
-              Countries
-              <ChevronDown size={16} />
-            </Link>
 
-            <Link
-              to="/candidates"
-              className="flex items-center gap-1 text-[15px] font-medium text-slate-700 hover:text-emerald-600"
-            >
-              Candidates
-              <ChevronDown size={16} />
-            </Link>
+  {/* Countries */}
+  <div className="relative group">
+    <button className="flex items-center gap-1 text-[15px] font-medium text-slate-700 hover:text-emerald-600">
+      Countries
+      <ChevronDown
+        size={16}
+        className="transition-transform duration-200 group-hover:rotate-180"
+      />
+    </button>
 
-            <Link
-              to="/employers"
-              className="flex items-center gap-1 text-[15px] font-medium text-slate-700 hover:text-emerald-600"
-            >
-              Employers
-              <ChevronDown size={16} />
-            </Link>
-          </div>
+    <div className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 opacity-0 invisible transition-all duration-200 group-hover:visible group-hover:opacity-100">
+      <div className="w-56 rounded-2xl border border-slate-200 bg-white p-2 shadow-xl">
+
+        <Link to="/countries" className="block rounded-xl px-4 py-2.5 hover:bg-slate-100">
+          Home
+        </Link>
+
+        <Link to="/country-pages/Saudi" className="block rounded-xl px-4 py-2.5 hover:bg-slate-100">
+          Saudi Arabia
+        </Link>
+
+        <Link to="/country-pages/USA" className="block rounded-xl px-4 py-2.5 hover:bg-slate-100">
+          USA
+        </Link>
+
+        <Link to="/country-pages/Oman" className="block rounded-xl px-4 py-2.5 hover:bg-slate-100">
+          Oman
+        </Link>
+
+        <Link to="/country-pages/Australia" className="block rounded-xl px-4 py-2.5 hover:bg-slate-100">
+          Australia
+        </Link>
+      </div>
+    </div>
+  </div>
+
+  {/* Candidates */}
+  <div className="relative group">
+    <button className="flex items-center gap-1 text-[15px] font-medium text-slate-700 hover:text-emerald-600">
+      Candidates
+      <ChevronDown
+        size={16}
+        className="transition-transform duration-200 group-hover:rotate-180"
+      />
+    </button>
+
+    <div className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 opacity-0 invisible transition-all duration-200 group-hover:visible group-hover:opacity-100">
+      <div className="w-56 rounded-2xl border border-slate-200 bg-white p-2 shadow-xl">
+
+        <Link to="/candidates" className="block rounded-xl px-4 py-2.5 hover:bg-slate-100">
+          Home
+        </Link>
+
+        <Link to="/jobs" className="block rounded-xl px-4 py-2.5 hover:bg-slate-100">
+          Jobs
+        </Link>
+
+        <Link to="/candidate-portal" className="block rounded-xl px-4 py-2.5 hover:bg-slate-100">
+          Dashboard
+        </Link>
+
+      </div>
+    </div>
+  </div>
+
+  {/* Employers */}
+  <div className="relative group">
+    <button className="flex items-center gap-1 text-[15px] font-medium text-slate-700 hover:text-emerald-600">
+      Employers
+      <ChevronDown
+        size={16}
+        className="transition-transform duration-200 group-hover:rotate-180"
+      />
+    </button>
+
+    <div className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 opacity-0 invisible transition-all duration-200 group-hover:visible group-hover:opacity-100">
+      <div className="w-56 rounded-2xl border border-slate-200 bg-white p-2 shadow-xl">
+
+        <Link to="/employers" className="block rounded-xl px-4 py-2.5 hover:bg-slate-100">
+          Home
+        </Link>
+
+        <Link to="/hire" className="block rounded-xl px-4 py-2.5 hover:bg-slate-100">
+          Hire Talent
+        </Link>
+
+        <Link to="/employer-portal" className="block rounded-xl px-4 py-2.5 hover:bg-slate-100">
+          Dashboard
+        </Link>
+
+      </div>
+    </div>
+  </div>
+
+</div>
 
           <div className="hidden lg:flex items-center gap-3">
             <Link to="/hire">

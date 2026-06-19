@@ -59,57 +59,199 @@ export function Hero() {
 
   return (
     <section className="relative lg:h-[calc(100vh-68px)] lg:min-h-[640px] bg-[#EEF2F7] overflow-hidden">
-      <div className="max-w-[1240px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-8 lg:gap-8 h-full">
+      <div
+        className="
+  max-w-[1240px]
+  mx-auto
+  px-6
+  pt-[15px]
+  pb-[40px]
+  mb-[-40px]
+  grid
+  lg:grid-cols-[56fr_44fr]
+  gap-[72px]
+  items-center
+  "
+      >
         {/* LEFT */}
-        <div className="pt-10 lg:pt-16 pb-10">
-          <Reveal>
-            <div className="flex items-center gap-3">
-              <span className="block w-7 h-[2px] bg-[#0BAF8A]" />
-              <span className="text-[11px] font-bold tracking-[0.1em] text-[#94A3B8] uppercase">
-                India's International Recruitment Agency
-              </span>
-            </div>
-            <h1 className="mt-5 font-extrabold text-[34px] sm:text-[42px] lg:text-[50px] leading-[1.08] tracking-[-0.03em] text-[#0D1B2A]">
-              Where great hospitals
-              <br />
-              meet great <span className="text-[#0BAF8A]">talent.</span>
-            </h1>
-            <p className="mt-4 max-w-[440px] text-[15px] lg:text-[16px] leading-[1.6] text-[#4A5568]">
-              Ozone Overseas connects verified hospitals and companies across the GCC and beyond
-              with India's best healthcare and technical professionals. MEA licensed. 15 years.
-              5,000 placements.
-            </p>
-          </Reveal>
+        <div className="pt-7 lg:pt-16 pb-10">
+          <div className="flex items-center gap-3">
+            <span className="block w-7 h-[2px] bg-[#0BAF8A]" />
+            <span className="text-[11px] font-bold tracking-[0.1em] text-[#94A3B8] uppercase">
+              India's International Recruitment Agency
+            </span>
+          </div>
+          <h1 className="mt-5 font-extrabold text-[34px] sm:text-[42px] lg:text-[50px] leading-[1.08] tracking-[-0.03em] text-[#0D1B2A]">
+            Where great Companies
+            <br />
+            meet exceptional <span className="text-[#0BAF8A]">talent.</span>
+          </h1>
+          <p className="mt-4 max-w-[440px] text-[15px] lg:text-[16px] leading-[1.6] text-[#4A5568]">
+            Ozone Overseas connects verified hospitals and companies across the GCC and beyond with
+            India's best healthcare and technical professionals. MEA licensed. 15 years. 5,000
+            placements.
+          </p>
 
-          <Reveal delay={120} className="mt-5 flex flex-col gap-2.5 max-w-[400px]">
-            <button className="group flex items-center justify-between bg-[#0F1C2E] hover:bg-[#162840] transition-colors rounded-[10px] py-[12px] px-5 text-left w-full">
-              <div className="flex items-center gap-3">
-                <Briefcase className="text-white" size={18} />
-                <div>
-                  <div className="text-white text-[14px] font-semibold">I'm an Employer</div>
-                  <div className="text-[#64748B] text-[12px]">
-                    Post a requirement, get candidates in 48h
+          <Reveal delay={20} className="mt-5 flex flex-col gap-2.5 max-w-[400px]">
+            <div className="space-y-3">
+              {/* EMPLOYER */}
+
+              <button
+                className="
+    group
+    relative
+    overflow-hidden
+    w-full
+    rounded-[18px]
+    bg-[#08192F]
+    px-6
+    py-5
+    text-left
+    transition-all
+    duration-300
+    hover:-translate-y-[3px]
+    hover:shadow-[0_24px_60px_rgba(8,25,47,.18)]
+    hover:scale-[1.01]
+    "
+              >
+                <div
+                  className="
+      absolute
+      right-[-20px]
+      top-[-20px]
+      w-[90px]
+      h-[90px]
+      rounded-full
+      bg-white/[0.04]
+      group-hover:scale-125
+      transition
+      "
+                />
+
+                <div className="relative flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <div
+                      className="
+          w-[52px]
+          h-[52px]
+          rounded-[16px]
+          bg-white/8
+          flex
+          items-center
+          justify-center
+          group-hover:rotate-[-8deg]
+          transition
+          "
+                    >
+                      <Briefcase size={22} className="text-[#58E0BD]" />
+                    </div>
+
+                    <div>
+                      <div className="text-white text-[18px] font-bold">Hire Talent</div>
+
+                      <div className="text-white/60 text-[13px] mt-1">
+                        Receive shortlisted candidates in 48 hours
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    className="
+        w-[42px]
+        h-[42px]
+        rounded-full
+        bg-white/8
+        flex
+        items-center
+        justify-center
+        group-hover:translate-x-1
+        transition
+        "
+                  >
+                    <ArrowRight className="text-white" size={18} />
                   </div>
                 </div>
-              </div>
-              <ArrowRight
-                className="text-white group-hover:translate-x-1 transition-transform"
-                size={18}
-              />
-            </button>
-            <button className="group flex items-center justify-between bg-[#0BAF8A] hover:bg-[#09A07F] transition-colors rounded-[10px] py-[12px] px-5 text-left w-full">
-              <div className="flex items-center gap-3">
-                <User className="text-white" size={18} />
-                <div>
-                  <div className="text-white text-[14px] font-semibold">I'm a Job Seeker</div>
-                  <div className="text-white/70 text-[12px]">Browse vacancies in 10+ countries</div>
+              </button>
+
+              {/* CANDIDATE */}
+
+              <button
+                className="
+    group
+    relative
+    overflow-hidden
+    w-full
+    rounded-[18px]
+    bg-[#09A07F]
+    px-6
+    py-5
+    text-left
+    transition-all
+    duration-300
+    hover:-translate-y-[3px]
+    hover:shadow-[0_26px_60px_rgba(11,175,138,.24)]
+    hover:scale-[1.01]
+    "
+              >
+                <div
+                  className="
+      absolute
+      right-[-30px]
+      top-[-30px]
+      w-[110px]
+      h-[110px]
+      rounded-full
+      bg-white/10
+      group-hover:scale-125
+      transition
+      "
+                />
+
+                <div className="relative flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <div
+                      className="
+          w-[52px]
+          h-[52px]
+          rounded-[16px]
+          bg-white/15
+          flex
+          items-center
+          justify-center
+          group-hover:rotate-[8deg]
+          transition
+          "
+                    >
+                      <User size={22} className="text-white" />
+                    </div>
+
+                    <div>
+                      <div className="text-white text-[18px] font-bold">Find Jobs</div>
+
+                      <div className="text-white/75 text-[13px] mt-1">
+                        Browse vacancies across 10+ countries
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    className="
+        w-[42px]
+        h-[42px]
+        rounded-full
+        bg-white/15
+        flex
+        items-center
+        justify-center
+        group-hover:translate-x-1
+        transition
+        "
+                  >
+                    <ArrowRight className="text-white" size={18} />
+                  </div>
                 </div>
-              </div>
-              <ArrowRight
-                className="text-white group-hover:translate-x-1 transition-transform"
-                size={18}
-              />
-            </button>
+              </button>
+            </div>
           </Reveal>
 
           <div className="mt-5 flex items-center gap-3">
@@ -131,73 +273,196 @@ export function Hero() {
         </div>
 
         {/* RIGHT */}
-        <div className="relative flex items-center justify-center lg:pt-10 pb-12">
-          <div className="relative w-full max-w-[400px]">
-            <div
-              className="bg-white rounded-2xl overflow-hidden"
-              style={{ boxShadow: "0 20px 60px rgba(15,28,46,0.1)" }}
-            >
-              <div className="flex items-center justify-between px-6 py-3 border-b border-[#EEF2F7]">
-                <span className="text-[13px] font-semibold text-[#0D1B2A]">Active Placements</span>
-                <span className="text-[12px] text-[#94A3B8]">June 2025</span>
+        {/* RIGHT */}
+
+        <Reveal delay={50}>
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[560px]">
+              {/* STAMP */}
+              <div
+                className="
+      absolute
+      right-[-8px]
+      top-[14px]
+      z-20
+      rotate-[8deg]
+      "
+              >
+                <div
+                  className="
+        w-[88px]
+        h-[88px]
+        rounded-full
+        bg-[#06101E]
+        border-[6px]
+        border-[#D8FFF6]
+        shadow-[0_20px_45px_rgba(11,175,138,.22)]
+        flex
+        flex-col
+        items-center
+        justify-center
+        "
+                >
+                  <div className="text-white text-[20px] font-black leading-none">5000+</div>
+
+                  <div
+                    className="
+          text-white/85
+          text-[8px]
+          uppercase
+          tracking-[.22em]
+          mt-1
+          "
+                  >
+                    Placed
+                  </div>
+                </div>
               </div>
-              {STATIC_ROWS.map((row, idx) => {
-                if (row === null) {
-                  // animated row
-                  return (
+
+              {/* MAIN CARD */}
+              <div
+                className="
+      w-full
+      rounded-[18px]
+      bg-[#09A07F]
+      px-6
+      py-6
+      overflow-hidden
+      shadow-[0_30px_90px_rgba(6,25,45,.14)]
+      "
+              >
+                {/* HEADER */}
+                <div className="pr-[70px]">
+                  <div
+                    className="
+          uppercase
+          tracking-[.22em]
+          text-[11px]
+          font-semibold
+          text-white/45
+          "
+                  >
+                    CURRENTLY HIRING
+                  </div>
+
+                  <h3
+                    className="
+          mt-2
+          text-[32px]
+          leading-[1]
+          font-black
+          text-white
+          max-w-[390px]
+          "
+                  >
+                    Find opportunities
+                    <br />
+                    across borders.
+                  </h3>
+                </div>
+
+                {/* JOBS */}
+                <div className="mt-7 grid grid-cols-2 gap-3">
+                  {[
+                    {
+                      title: "ICU Staff Nurse",
+                      country: "Saudi Arabia",
+                    },
+                    {
+                      title: "Biomedical Tech",
+                      country: "Qatar",
+                    },
+                    {
+                      title: "Caregiver",
+                      country: "Canada",
+                    },
+                    {
+                      title: "Hospitality",
+                      country: "UAE",
+                    },
+                  ].map((item) => (
                     <div
-                      key="anim"
-                      className={`flex items-center justify-between px-6 py-2.5 border-b border-[#F8FAFC] ${flash ? "flash" : ""}`}
+                      key={item.title}
+                      className="
+            rounded-[22px]
+            bg-[#F8FCFD]
+            h-[118px]
+            px-5
+            py-4
+            flex
+            flex-col
+            justify-between
+            transition-all
+            duration-300
+            hover:-translate-y-1
+            hover:shadow-xl
+            "
                     >
-                      <div className="flex items-center gap-3">
-                        <span className="text-[18px]">🇦🇪</span>
-                        <div>
-                          <div className="text-[14px] font-semibold text-[#0D1B2A]">OT Nurse</div>
-                          <div className="text-[12px] text-[#94A3B8]">NMC Healthcare, Dubai</div>
+                      <div
+                        className="
+              w-[10px]
+              h-[10px]
+              rounded-full
+              bg-[#09A07F]
+              "
+                      />
+
+                      <div>
+                        <div
+                          className="
+                text-[#08192F]
+                text-[18px]
+                leading-[1.1]
+                font-black
+                "
+                        >
+                          {item.title}
+                        </div>
+
+                        <div
+                          className="
+                mt-2
+                text-[#74849B]
+                text-[14px]
+                "
+                        >
+                          {item.country}
                         </div>
                       </div>
-                      <span
-                        key={statusIdx}
-                        className={`fade-row text-[11px] font-semibold px-2.5 py-1 rounded-full border ${animatedStatus.classes}`}
-                      >
-                        {animatedStatus.label}
-                      </span>
                     </div>
-                  );
-                }
-                return (
-                  <div
-                    key={idx}
-                    className="flex items-center justify-between px-6 py-2.5 border-b border-[#F8FAFC]"
+                  ))}
+                </div>
+
+                {/* FOOTER */}
+                <div
+                  className="
+        mt-5
+        pt-5
+        border-t
+        border-white/12
+        flex
+        items-center
+        justify-between
+        "
+                >
+                  <div className="text-[13px] text-white/55">Updated live</div>
+
+                  <button
+                    className="
+          text-[14px]
+          font-semibold
+          text-[#D6FFF6]
+          hover:translate-x-1
+          transition
+          "
                   >
-                    <div className="flex items-center gap-3">
-                      <span className="text-[18px]">{row.flag}</span>
-                      <div>
-                        <div className="text-[14px] font-semibold text-[#0D1B2A]">{row.role}</div>
-                        <div className="text-[12px] text-[#94A3B8]">{row.org}</div>
-                      </div>
-                    </div>
-                    <span
-                      className={`text-[11px] font-semibold px-2.5 py-1 rounded-full border ${row.status.classes}`}
-                    >
-                      {row.status.label}
-                    </span>
-                  </div>
-                );
-              })}
-              <div className="flex items-center justify-between px-6 py-2.5 bg-[#F8FAFC]">
-                <span className="text-[12px] text-[#94A3B8]">12 Active · 48 Placed this month</span>
-                <a href="#" className="text-[12px] font-semibold text-[#0BAF8A]">
-                  View all →
-                </a>
+                    Explore all →
+                  </button>
+                </div>
               </div>
             </div>
-            <div className="absolute -bottom-5 -left-5 bg-[#0F1C2E] rounded-[10px] px-[18px] py-3 z-10 shadow-xl">
-              <div className="text-[11px] font-bold text-[#0BAF8A]">🟢 New Vacancy</div>
-              <div className="text-[12px] text-white">Head Nurse · Qatar · Closing in 3 days</div>
-            </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
