@@ -5,7 +5,7 @@
 @theme {
   --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
 
-<<<<<<< HEAD
+
   --color-bg: #eef2f7;
   --color-surface: #ffffff;
   --color-alt: #f0f4f9;
@@ -37,7 +37,7 @@
 }
 
 @keyframes rotate-angle {
-<<<<<<< HEAD
+
   to {
     --angle: 360deg;
   }
@@ -134,9 +134,8 @@
 
   -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
 }
-=======
-  to { --angle: 360deg; }
-}
+
+
 
 @keyframes marquee {
   from { transform: translateX(0); }
@@ -168,7 +167,7 @@
   to { width: 100%; }
 }
 
->>>>>>> 67589509f35f39894a5900b3fb234793f5968eb9
+
 @supports (animation-timeline: scroll()) {
   .scroll-progress-bar {
     animation: scroll-progress auto linear;
@@ -182,13 +181,13 @@ html {
 }
 
 body {
-<<<<<<< HEAD
+
   background-color: #eef2f7;
   color: #0d1b2a;
-=======
+
   background-color: #EEF2F7;
   color: #0D1B2A;
->>>>>>> 67589509f35f39894a5900b3fb234793f5968eb9
+
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -205,35 +204,35 @@ body {
 .shimmer-layer {
   position: absolute;
   inset: 0;
-<<<<<<< HEAD
+
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
-=======
+
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
->>>>>>> 67589509f35f39894a5900b3fb234793f5968eb9
+
   background-size: 200% 100%;
   animation: shimmer 6s linear infinite;
   pointer-events: none;
 }
 
 .animated-border {
-<<<<<<< HEAD
+
   background: conic-gradient(from var(--angle), #0baf8a, transparent 25%, transparent 75%, #0baf8a);
-=======
+
   background: conic-gradient(from var(--angle), #0BAF8A, transparent 25%, transparent 75%, #0BAF8A);
->>>>>>> 67589509f35f39894a5900b3fb234793f5968eb9
+
   animation: rotate-angle 4s linear infinite;
 }
 
 .reveal {
   opacity: 0;
   transform: translateY(24px);
-<<<<<<< HEAD
+
   transition:
     opacity 0.55s ease-out,
     transform 0.55s ease-out;
-=======
+
   transition: opacity 0.55s ease-out, transform 0.55s ease-out;
->>>>>>> 67589509f35f39894a5900b3fb234793f5968eb9
+
 }
 .reveal.in-view {
   opacity: 1;
