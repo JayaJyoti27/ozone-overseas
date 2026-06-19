@@ -9,7 +9,6 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-<<<<<<< HEAD
 import { Route as JobsRouteImport } from './routes/jobs'
 import { Route as HireRouteImport } from './routes/hire'
 import { Route as EmployersRouteImport } from './routes/employers'
@@ -61,16 +60,11 @@ const ApplyRoute = ApplyRouteImport.update({
   path: '/apply',
   getParentRoute: () => rootRouteImport,
 } as any)
-=======
-import { Route as IndexRouteImport } from './routes/index'
-
->>>>>>> 67589509f35f39894a5900b3fb234793f5968eb9
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-<<<<<<< HEAD
 const CountryPagesSaudiRoute = CountryPagesSaudiRouteImport.update({
   id: '/country-pages/Saudi',
   path: '/country-pages/Saudi',
@@ -100,19 +94,10 @@ export interface FileRoutesByTo {
   '/hire': typeof HireRoute
   '/jobs': typeof JobsRoute
   '/country-pages/Saudi': typeof CountryPagesSaudiRoute
-=======
-
-export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-}
-export interface FileRoutesByTo {
-  '/': typeof IndexRoute
->>>>>>> 67589509f35f39894a5900b3fb234793f5968eb9
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-<<<<<<< HEAD
   '/apply': typeof ApplyRoute
   '/candidate-portal': typeof CandidatePortalRoute
   '/candidates': typeof CandidatesRoute
@@ -160,20 +145,10 @@ export interface FileRouteTypes {
     | '/hire'
     | '/jobs'
     | '/country-pages/Saudi'
-=======
-}
-export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
-  fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
->>>>>>> 67589509f35f39894a5900b3fb234793f5968eb9
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-<<<<<<< HEAD
   ApplyRoute: typeof ApplyRoute
   CandidatePortalRoute: typeof CandidatePortalRoute
   CandidatesRoute: typeof CandidatesRoute
@@ -183,13 +158,10 @@ export interface RootRouteChildren {
   HireRoute: typeof HireRoute
   JobsRoute: typeof JobsRoute
   CountryPagesSaudiRoute: typeof CountryPagesSaudiRoute
-=======
->>>>>>> 67589509f35f39894a5900b3fb234793f5968eb9
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-<<<<<<< HEAD
     '/jobs': {
       id: '/jobs'
       path: '/jobs'
@@ -246,8 +218,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApplyRouteImport
       parentRoute: typeof rootRouteImport
     }
-=======
->>>>>>> 67589509f35f39894a5900b3fb234793f5968eb9
     '/': {
       id: '/'
       path: '/'
@@ -255,7 +225,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-<<<<<<< HEAD
     '/country-pages/Saudi': {
       id: '/country-pages/Saudi'
       path: '/country-pages/Saudi'
@@ -263,14 +232,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CountryPagesSaudiRouteImport
       parentRoute: typeof rootRouteImport
     }
-=======
->>>>>>> 67589509f35f39894a5900b3fb234793f5968eb9
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-<<<<<<< HEAD
   ApplyRoute: ApplyRoute,
   CandidatePortalRoute: CandidatePortalRoute,
   CandidatesRoute: CandidatesRoute,
@@ -280,13 +246,10 @@ const rootRouteChildren: RootRouteChildren = {
   HireRoute: HireRoute,
   JobsRoute: JobsRoute,
   CountryPagesSaudiRoute: CountryPagesSaudiRoute,
-=======
->>>>>>> 67589509f35f39894a5900b3fb234793f5968eb9
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-<<<<<<< HEAD
 
 import type { getRouter } from './router.tsx'
 import type { startInstance } from './start.ts'
@@ -297,5 +260,3 @@ declare module '@tanstack/react-start' {
     config: Awaited<ReturnType<typeof startInstance.getOptions>>
   }
 }
-=======
->>>>>>> 67589509f35f39894a5900b3fb234793f5968eb9
